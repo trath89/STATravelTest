@@ -1,20 +1,20 @@
 package com.statravel.pages;
 
-import java.util.Iterator;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchHomePage {
 	
+	WebDriver driver;
+	
 	public SearchHomePage(WebDriver driver) {
+		this.driver = driver;
         PageFactory.initElements(driver, this); 
     }
 		
@@ -34,26 +34,23 @@ public class SearchHomePage {
 		 cookieButton.click();
 	}
 	 
-	 public void enterDestintion(String country) {
+	 public void enterDestintion(String country) throws InterruptedException {
 		 selectDestination.sendKeys(country);
+		 Thread.sleep(1000);
 	 }
 	 
-	 public void clickFindATourButton() throws InterruptedException {
-		 Thread.sleep(200);
+	 public void clickFindATourButton() {
 		 findATourButton.click();
 	 }
 	 
 	 public void selectAutoSuggestOption(String selectTour) throws InterruptedException {
-		List<WebElement> elements = populatedCountries;
-		if (elements != null) {
-			for (Iterator<WebElement> webElement = elements.iterator(); webElement.hasNext();) {
-				WebElement item = webElement.next();
-				if (item.getText().equals(selectTour)) {
-					Thread.sleep(500);
-					item.click();
-					break;
-				}
-			}
+	 	List<WebElement> optionsToSelect = driver.findElements(By.tagName("li"));
+		for(WebElement option : optionsToSelect){
+		    if(option.getText().equals(selectTour)) {
+		        System.out.println("Trying to select: "+selectTour);
+		        option.click();
+		        break;
+		    }
 		}
 	}
 	 

@@ -44,7 +44,7 @@ formatter.match({
   "location": "SearchTourStepDefinition.user_is_in_STATravel_website(String)"
 });
 formatter.result({
-  "duration": 7986067148,
+  "duration": 11005411183,
   "status": "passed"
 });
 formatter.match({
@@ -57,21 +57,21 @@ formatter.match({
   "location": "SearchTourStepDefinition.user_select_country(String)"
 });
 formatter.result({
-  "duration": 13865805984,
+  "duration": 21708961075,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchTourStepDefinition.user_clicks_on_Find_a_Tour_button()"
 });
 formatter.result({
-  "duration": 12207740080,
+  "duration": 3485146084,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchTourStepDefinition.user_lands_on_results_page()"
 });
 formatter.result({
-  "duration": 2052082974,
+  "duration": 124440867,
   "status": "passed"
 });
 formatter.scenario({
@@ -106,7 +106,7 @@ formatter.match({
   "location": "SearchTourStepDefinition.user_is_in_results_page()"
 });
 formatter.result({
-  "duration": 48331856,
+  "duration": 364541678,
   "status": "passed"
 });
 formatter.match({
@@ -119,14 +119,14 @@ formatter.match({
   "location": "SearchTourStepDefinition.user_change_the_sort_order_to(String)"
 });
 formatter.result({
-  "duration": 3001199965,
+  "duration": 1032539905,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchTourStepDefinition.user_clicks_on_View_More_button_to_display_more_all_results()"
 });
 formatter.result({
-  "duration": 658558306,
+  "duration": 690459255,
   "status": "passed"
 });
 formatter.match({
@@ -139,7 +139,7 @@ formatter.match({
   "location": "SearchTourStepDefinition.verify_if_matches_found_text_is_equal_to_the_actual_number_of_results_displayed(int)"
 });
 formatter.result({
-  "duration": 3154502414,
+  "duration": 737378886,
   "status": "passed"
 });
 });
